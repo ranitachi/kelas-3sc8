@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan Jquery</title>
+</head>
+<body>
+    <form>
+        Email : <input type="email" name="email" id="email">
+        <br>
+        <button id="btnCek">Cek</button>
+    </form>
+    <button id="btnGetPage">Ambil Halaman</button>
+    <div id="otherPage"></div>
+</body>
+</html>
+<script src="jquery-3.4.1.js"></script>
+
+<style>
+    .text-box{
+        border:3px solid #000;
+        padding:10px;   
+        margin:30px 20px;
+    }
+</style>
+<script language="javascript" type="text/javascript">
+    $(document).ready(function(){
+
+        $('#btnCek').on('click',function(){
+            var email = $('#email').val();
+            if (email == '')
+                alert('Email Tidak Boleh Kosong')
+            else
+                alert('Email : ' + email);
+        });
+
+        $('#btnGetPage').on('click',function(){
+            $('#otherPage').load('latihan-css.html');
+        });
+    });
+</script>

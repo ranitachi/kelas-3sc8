@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan jQuery Mobile</title>
+    <link rel="stylesheet" href="script/jquery.mobile-1.4.5.css" />
+    <script src="script/jquery-2.1.1.min.js"></script>
+    <script src="script/jquery.mobile-1.4.5.js"></script>
+</head>
+<script>
+$(document).ready(function(){
+    var str="";
+    for(var i=0;i<50;i++)
+    {
+        str+=i+"<br/>";
+    }
+    $('#div1').html(str);
+});
+</script>
+<body>
+    <div id="page1" data-role="page">
+        <div data-role="main" class="ui-content">
+            <a href="#" id="scrollDownBtn" data-role="button" onclick="$.mobile.silentScroll(2000)">Scroll Down</a>
+            <div id="div1"></div>
+            <a href="#" id="scrollButtonUp" data-role="button" onclick="$.mobile.silentScroll(0)">Scroll Up</a>
+        </div>
+    </div>
+</body>
+
+</html>

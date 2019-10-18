@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Latihan jQuery Mobile</title>
+    <link rel="stylesheet" href="script/jquery.mobile-1.4.5.css" />
+    <script src="script/jquery-2.1.1.min.js"></script>
+    <script src="script/jquery.mobile-1.4.5.js"></script>
+</head>
+
+<body>
+    <div id="page1" data-role="page">
+        <div data-role="main" class="ui-content">
+            <a href="#page2">Go To Page 2</a>
+        </div>
+    </div>
+    <div id="page2" data-role="page">
+        <div data-role="main" class="ui-content">
+            <p>
+                <a href="#page1" data-transition="flip" data-direction="reverse">Go To Page 1</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

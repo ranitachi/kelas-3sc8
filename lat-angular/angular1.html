@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="" ng-init="Name='Peter';Marks='100';Gross_Monthly_Sal='25000';Tax_Monthly_Deduct='300';Fruits=['Apple','Mango','Orange','Grapes'];Employee={E_Name:'Sam     
+        Winchestor',E_Code:'1001',E_Dept:'HR'}" ng-controller="MyController">
+        <p><input type="text" name="Name" ng-model="Name"></p>
+        <p><input type="text" name="Marks" ng-model="Marks"></p>
+        <p>Hi <b>{{Name}}</b>, Your Marks <b>{{Marks}}</b></p>
+   <br>
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        <br>
+        Full Name: {{firstName + " " + lastName}}
+    <br>
+    <table>
+        <tr>
+            <td>Gross Monthly Salary: </td>
+            <td><input type="text" ng-model="Gross_Monthly_Sal"></td>
+        </tr>
+        <tr>
+            <td>Tax Deduction: </td>
+            <td> <input type="text" ng-model="Tax_Monthly_Deduct"> </td>
+        </tr>
+    </table>
+    <p style="text-align: center"> Net Salary: {{Gross_Monthly_Sal - Tax_Monthly_Deduct}}</p>
+    <p>Displaying Array Elements using ng-repeat  Directive</p>
+        <ol>
+            <li ng-repeat="x in Fruits">{{ x }} </li>
+        </ol>
+
+        <p>The department is <span ng-bind="Employee.E_Dept"></span></p>
+
+    </div>
+    <script>
+        function MyController($scope) {
+            $scope.firstName = "Steve",
+                $scope.lastName = "Jobs"
+        }
+    </script>
+
+</body>
+</html>
